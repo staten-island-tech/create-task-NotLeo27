@@ -11,10 +11,11 @@
       offense: null,
     },
     skills: [
-      "Advanced Shooting",
-      "Destroyer Mode",
+      "Perfect Kick Accuracy",
+      "Spatial Awareness",
       "Off the Ball",
-      "Advanced Dribbling",
+      "Puppet Soccer",
+      "Egotistic Destroyer",
     ],
   },
   {
@@ -29,15 +30,14 @@
       offense: 85,
     },
     skills: [
-      "Perfect Passing",
-      "Advanced Dribbling",
+      "Perfect Kick Technique",
+      "Counter-Dribbling",
+      "Reflex",
       "Meta-Vision",
-      "Off the Ball",
-      "Positioning",
     ],
   },
   {
-    name: "Aiku Olivier",
+    name: "Aiku Oliver",
     cumulative_stats: 85,
     stats: {
       speed: 81,
@@ -47,7 +47,12 @@
       shoot: 77,
       offense: 72,
     },
-    skills: ["Meta-Vision", "Total defense"],
+    skills: [
+      "Dominant Physicality",
+      "Spatial Awareness",
+      "Reflex",
+      "Meta-Vision",
+    ],
   },
   {
     name: "Baro Shoei",
@@ -60,7 +65,7 @@
       shoot: 96,
       offense: 95,
     },
-    skills: ["Advanced Shooting", "Chop Dribble", "Predator Eye"],
+    skills: ["Charging Skill", "Chop Dribbling", "Middle Shot", "Predator Eye"],
   },
   {
     name: "Zantetsu Tsurugi",
@@ -86,7 +91,7 @@
       shoot: 67,
       offense: 82,
     },
-    skills: ["Meta-Vision"],
+    skills: ["Spatial Awareness", "Watchtower Soccer", "Meta-Vision"],
   },
   {
     name: "Chigiri Hyoma",
@@ -112,7 +117,7 @@
       shoot: 82,
       offense: 94,
     },
-    skills: ["Meta-Vision", "Advanced Shooting", "Positioning"],
+    skills: ["Meta-Vision (Stage 2)", "Advanced Shooting", "Positioning", ""],
   },
   {
     name: "Meguru Bachira",
