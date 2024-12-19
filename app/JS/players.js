@@ -102,7 +102,7 @@
       passing: null,
       dribble: null,
       shoot: null,
-      offense: null,
+      offense: 95,
     },
     skills: ["Speed"],
     position: null,
