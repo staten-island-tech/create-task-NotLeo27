@@ -178,7 +178,12 @@
       shoot: 95,
       offense: 94,
     },
-    skills: ["Dominant Physicality", "Ambidexterity", "Manmarking"],
+    skills: [
+      "Dominant Physicality",
+      "Ambidexterity",
+      "Manmarking",
+      "Jumping Power",
+    ],
   },
   {
     name: "Gin Gagamaru",
@@ -292,19 +297,6 @@
       offense: 76,
     },
     skills: ["Jumping Power", "Long Reach"],
-  },
-  {
-    name: "Tabito Karasu",
-    cumulative_stats: 81,
-    stats: {
-      speed: 82,
-      defense: 73,
-      passing: 73,
-      dribble: 77,
-      shoot: 83,
-      offense: 84,
-    },
-    skills: ["Expert Ball Control", "Feints", "Meta-Vision"],
   },
   {
     name: "Don Lorenzo",

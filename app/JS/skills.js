@@ -8,6 +8,7 @@ skills = {
     "44 Red Panther Sniper",
     "Key Passing",
     "Immense Stamina",
+    "Jumping Power",
   ],
   "5 points": [
     "Perfect Kick Accuracy",
@@ -24,12 +25,9 @@ skills = {
     "Elastic Dribbling",
     "Gyro Shot",
     "Drive Shot",
-    "Jumping Power",
     "Long Reach",
     "Immense Speed",
     "Positioning",
-    "Expert Ball Control",
-    "Feints",
   ],
   "10 points": [
     "Egotistic Destroyer",
