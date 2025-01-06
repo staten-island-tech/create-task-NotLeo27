@@ -104,7 +104,16 @@
       shoot: 82,
       offense: 94,
     },
-    skills: ["Spatial Awareness", "Meta-Vision", "Egocentrism", "Direct Shot", "Off the Ball", "Reflex"],
+    skills: [
+      "Direct Shot",
+      "Spatial Awareness",
+      "Meta-Vision",
+      "Egocentrism",
+      "Direct Shot",
+      "Off the Ball",
+      "Reflex",
+      "Two Gun Volley",
+    ],
   },
   {
     name: "Meguru Bachira",
@@ -195,7 +204,11 @@
       shoot: 88,
       offense: 81,
     },
-    skills: ["Dominant Physicality", "Nimble Dribbling", "Perfect Kick Accuracy"],
+    skills: [
+      "Dominant Physicality",
+      "Nimble Dribbling",
+      "Perfect Kick Accuracy",
+    ],
   },
   {
     name: "Charles Chevalier",
@@ -260,7 +273,12 @@
       shoot: 92,
       offense: 90,
     },
-    skills: ["Dominant Physicality", "Spatial Awareness", "Reflex", "Drive Shot"],
+    skills: [
+      "Dominant Physicality",
+      "Spatial Awareness",
+      "Reflex",
+      "Drive Shot",
+    ],
   },
   {
     name: "Jyubei Aryu",
@@ -276,7 +294,7 @@
     skills: ["Jumping Power", "Long Reach"],
   },
   {
-    name: "Shuto Sendou",
+    name: "Tabito Karasu",
     cumulative_stats: 81,
     stats: {
       speed: 82,
@@ -286,7 +304,7 @@
       shoot: 83,
       offense: 84,
     },
-    skills: ["Advanced Shooting"],
+    skills: ["Expert Ball Control", "Feints", "Meta-Vision"],
   },
   {
     name: "Don Lorenzo",
@@ -312,6 +330,6 @@
       shoot: 72,
       offense: 86,
     },
-    skills: ["Immeasurable Speed", "Positioning"],
+    skills: ["Immense Speed", "Positioning"],
   },
 ];
