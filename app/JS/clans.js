@@ -22,7 +22,7 @@ clubs = [
   {
     name: "Paris X Gen",
     famerequirement: 9999,
-    description: "Loki did not preform at all during that match",
+    description: "Aka Destroyer Mode Rin carrying the whole team",
   },
   {
     name: "Re Al",
