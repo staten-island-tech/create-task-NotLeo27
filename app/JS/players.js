@@ -1,4 +1,4 @@
-[
+players = [
   {
     name: "Rin Itoshi",
     cumulative_stats: 95,
@@ -325,3 +325,5 @@
     skills: ["Immense Speed", "Positioning"],
   },
 ];
+
+export { players };

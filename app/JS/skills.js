@@ -44,3 +44,5 @@ skills = {
     "Zombie Dribbling",
   ],
 };
+
+export { skills };
