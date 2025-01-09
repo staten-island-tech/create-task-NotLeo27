@@ -7,72 +7,96 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
-          theme: {
-              extend: {
-                  colors: {
-                      'game-gold': '#fbbf24',
-                      'game-gold-dark': '#d97706',
-                  }
-              }
-          }
-      }
+        theme: {
+          extend: {
+            colors: {
+              "game-gold": "#fbbf24",
+              "game-gold-dark": "#d97706",
+            },
+          },
+        },
+      };
     </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite App</title>
   </head>
   <body class="font-sans">
     <div class="relative min-h-screen w-full bg-black overflow-hidden">
-      
-        <div class="absolute inset-0 z-0">
-            <img src="/placeholder.svg?height=1080&width=1920" alt="Game background" class="w-full h-full object-cover opacity-80">
-            <div class="absolute inset-0 bg-gradient-to-r from-fuchsia-500/30 to-green-500/30 mix-blend-overlay"></div>
+      <div class="absolute inset-0 z-0">
+        <img
+          src="/placeholder.svg?height=1080&width=1920"
+          alt="Game background"
+          class="w-full h-full object-cover opacity-80"
+        />
+        <div
+          class="absolute inset-0 bg-gradient-to-r from-fuchsia-500/30 to-green-500/30 mix-blend-overlay"
+        ></div>
+      </div>
+
+      <div class="relative z-10 p-4">
+        <div class="flex flex-col items-start gap-4">
+          <button
+            class="transform hover:scale-105 transition-transform duration-200"
+          >
+            <div
+              class="bg-gradient-to-r from-game-gold to-game-gold-dark px-12 py-3 rounded-lg shadow-lg"
+            >
+              <span class="text-4xl font-bold text-white tracking-wider"
+                >START</span
+              >
+            </div>
+          </button>
+
+          <div class="bg-black/40 backdrop-blur-sm p-4 rounded-lg">
+            <h2 class="text-game-gold text-xl mb-2">SELECT MODE</h2>
+            <div
+              class="flex items-center gap-2 p-2 bg-indigo-900/50 rounded-md w-[200px]"
+            >
+              <span class="text-2xl font-bold text-white">5V5</span>
+              <img
+                src="/BlueLockS2.png"
+                alt="Character portraits"
+                class="w-[150px] h-[100px] rounded-md object-cover"
+              />
+            </div>
+          </div>
         </div>
+      </div>
 
-        <div class="relative z-10 p-4">
-            <div class="flex flex-col items-start gap-4">
-
-                <button class="transform hover:scale-105 transition-transform duration-200">
-                    <div class="bg-gradient-to-r from-game-gold to-game-gold-dark px-12 py-3 rounded-lg shadow-lg">
-                        <span class="text-4xl font-bold text-white tracking-wider">START</span>
-                    </div>
-                </button>
-
-                <div class="bg-black/40 backdrop-blur-sm p-4 rounded-lg">
-                    <h2 class="text-game-gold text-xl mb-2">SELECT MODE</h2>
-                    <div class="flex items-center gap-2 p-2 bg-indigo-900/50 rounded-md">
-                        <span class="text-3xl font-bold text-white">5V5</span>
-                        <img src="/BlueLockS2.png" alt="Character portraits" class="w-50 h-25 rounded-md">
-                    </div>
-                </div>
-            </div>
+      <div class="absolute bottom-0 left-0 right-0 z-20">
+        <div
+          class="flex justify-around items-center p-4 bg-black/70 backdrop-blur"
+        >
+          <button
+            class="text-white hover:bg-white/10 text-lg font-semibold px-8 py-6 transition-colors duration-200"
+            role="tab"
+            id="battle"
+          >
+            BATTLE
+          </button>
+          <button
+            class="text-white hover:bg-white/10 text-lg font-semibold px-8 py-6 transition-colors duration-200"
+            role="tab"
+            i="inventory"
+          >
+            INVENTORY
+          </button>
+          <button
+            class="text-white hover:bg-white/10 text-lg font-semibold px-8 py-6 transition-colors duration-200"
+            role="tab"
+            id="shop"
+          >
+            SHOP
+          </button>
+          <button
+            class="text-white hover:bg-white/10 text-lg font-semibold px-8 py-6 transition-colors duration-200"
+            role="tab"
+            id="settings"
+          >
+            SETTINGS
+          </button>
         </div>
-
-        <div class="absolute top-4 right-4 flex items-center gap-4 z-20">
-            <div class="bg-black/50 p-2 rounded-full">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
-                </svg>
-            </div>
-            <div class="bg-black/50 p-2 rounded-full">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
-                </svg>
-            </div>
-            <div class="bg-yellow-500 p-2 rounded-full">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
-                </svg>
-            </div>
-        </div>
-
-        <div class="absolute bottom-0 left-0 right-0 z-20">
-            <div class="flex justify-around items-center p-4 bg-black/70 backdrop-blur">
-                <button class="text-white hover:bg-white/10 text-lg font-semibold px-8 py-6 transition-colors duration-200">BATTLE</button>
-                <button class="text-white hover:bg-white/10 text-lg font-semibold px-8 py-6 transition-colors duration-200">INVENTORY</button>
-                <button class="text-white hover:bg-white/10 text-lg font-semibold px-8 py-6 transition-colors duration-200">SHOP</button>
-                <button class="text-white hover:bg-white/10 text-lg font-semibold px-8 py-6 transition-colors duration-200">SETTINGS</button>
-            </div>
-        </div>
+      </div>
     </div>
     <script src="main.js"></script>
   </body>

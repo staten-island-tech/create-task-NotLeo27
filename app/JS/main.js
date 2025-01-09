@@ -1,6 +1,4 @@
 import { clubs } from "./clubs";
-import { players } from "./players" 
+import { players } from "./players";
 
-function displayShop(clubs) {
-    
-}
+function displayInventory() {}
