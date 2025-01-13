@@ -5,63 +5,134 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <link rel="stylesheet" href="CSS/style.css" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              "game-gold": "#fbbf24",
-              "game-gold-dark": "#d97706",
-            },
-          },
-        },
+    <script> 
+      tailwind.config = { 
+        theme: { 
+          extend: { 
+            colors: { 
+              "game-gold": "#fbbf24", 
+              "game-gold-dark": "#d97706", 
+            }, 
+            backgroundImage: { 
+              'image': "url('BG1.png')", 
+              'image-next': "url('BG2.png')", 
+            }, 
+            keyframes: { 
+              fadeOut: { 
+                '0%': { opacity: '1' }, 
+                '100%': { opacity: '0' }, 
+              }, 
+              fadeIn: { 
+                '0%': { opacity: '0' }, 
+                '100%': { opacity: '1' }, 
+              }, 
+            }, 
+            animation: { 
+              fadeOut: 'fadeOut 1s ease-in-out forwards', 
+              fadeIn: 'fadeIn 1s ease-in-out forwards', 
+            }, 
+          }, 
+        }, 
       };
+    </script>
+    
+    <script>
+      function transitionBackground() {
+        const currentBg = document.querySelector('.bg-image');
+        const nextBg = document.querySelector('.bg-image-next');
+        
+        if (!currentBg || !nextBg) {
+            console.error('Background elements not found');
+            return;
+        }
+    
+        currentBg.classList.add('animate-fadeOut');
+        nextBg.classList.remove('opacity-0');
+        nextBg.classList.add('animate-fadeIn');
+        
+        setTimeout(() => {
+            currentBg.classList.remove('animate-fadeOut');
+            nextBg.classList.remove('animate-fadeIn');
+            
+            const tempClass = currentBg.classList.contains('bg-image') ? 'bg-image-next' : 'bg-image';
+            currentBg.classList.remove('bg-image', 'bg-image-next');
+            currentBg.classList.add(tempClass);
+            nextBg.classList.remove('bg-image', 'bg-image-next');
+            nextBg.classList.add(tempClass === 'bg-image' ? 'bg-image-next' : 'bg-image');
+        
+            currentBg.classList.remove('opacity-0');
+            nextBg.classList.add('opacity-0');
+        }, 1000);
+      }
+    
+      function startAutomaticTransitions(interval = 5000) {
+        setInterval(transitionBackground, interval);
+      }
+    
+      document.addEventListener('DOMContentLoaded', () => {
+        startAutomaticTransitions(5000);
+    
+        const battleBtn = document.getElementById('battle');
+        const inventoryBtn = document.getElementById('inventory');
+        const shopBtn = document.getElementById('shop');
+        const settingsBtn = document.getElementById('settings');
+    
+        if (battleBtn) battleBtn.addEventListener('click', battleScreen);
+        if (inventoryBtn) inventoryBtn.addEventListener('click', displayInventory);
+        if (shopBtn) shopBtn.addEventListener('click', displayShop);
+        if (settingsBtn) settingsBtn.addEventListener('click', () => {
+            console.log('Settings clicked');
+        });
+      });
+      
     </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite App</title>
   </head>
   <body class="font-sans">
+    
     <div class="relative min-h-screen w-full bg-black overflow-hidden">
-      <div class="absolute inset-0 z-0">
-        <img
-          src="/placeholder.svg?height=1080&width=1920"
-          alt="Game background"
-          class="w-full h-full object-cover opacity-80"
-        />
-        <div
-          class="absolute inset-0 bg-gradient-to-r from-fuchsia-500/30 to-green-500/30 mix-blend-overlay"
-        ></div>
-      </div>
+      
+      <div id="container">
 
-      <div class="relative z-10 p-4">
-        <div class="flex flex-col items-start gap-4">
-          <button
-            class="transform hover:scale-105 transition-transform duration-200"
-          >
-            <div
-              class="bg-gradient-to-r from-game-gold to-game-gold-dark px-12 py-3 rounded-lg shadow-lg"
+        <div class="absolute inset-0 z-0 bg-fade">
+          <div class="absolute inset-0 bg-image bg-cover bg-center transition-opacity duration-1000 ease-in-out"></div>
+          <div class="absolute inset-0 bg-image-next bg-cover bg-center transition-opacity duration-1000 ease-in-out opacity-0"></div>
+          <div class="absolute inset-0 bg-gradient-to-r from-fuchsia-500/30 to-green-500/30 mix-blend-overlay"></div>
+        </div>
+
+        <div class="relative z-10 p-4">
+          <div class="flex flex-col items-start gap-4">
+            <button
+              class="transform hover:scale-105 transition-transform duration-200"
             >
-              <span class="text-4xl font-bold text-white tracking-wider"
-                >START</span
+              <div
+                class="bg-gradient-to-r from-game-gold to-game-gold-dark px-12 py-3 rounded-lg shadow-lg"
               >
-            </div>
-          </button>
+                <span class="text-4xl font-bold text-white tracking-wider"
+                  >START</span
+                >
+              </div>
+            </button>
 
-          <div class="bg-black/40 backdrop-blur-sm p-4 rounded-lg">
-            <h2 class="text-game-gold text-xl mb-2">SELECT MODE</h2>
-            <div
-              class="flex items-center gap-2 p-2 bg-indigo-900/50 rounded-md w-[200px]"
-            >
-              <span class="text-2xl font-bold text-white">5V5</span>
-              <img
-                src="/BlueLockS2.png"
-                alt="Character portraits"
-                class="w-[150px] h-[100px] rounded-md object-cover"
-              />
+            <div class="bg-black/40 backdrop-blur-sm p-4 rounded-lg">
+              <h2 class="text-game-gold text-xl mb-2">SELECT MODE</h2>
+              <div
+                class="flex items-center gap-2 p-2 bg-indigo-900/50 rounded-md w-[200px]"
+              >
+                <span class="text-2xl font-bold text-white">5V5</span>
+                <img
+                  src="/BlueLockS2.png"
+                  alt="Character portraits"
+                  class="w-[150px] h-[100px] rounded-md object-cover"
+                />
+              </div>
             </div>
           </div>
         </div>
+        
       </div>
+      
 
       <div class="absolute bottom-0 left-0 right-0 z-20">
         <div
