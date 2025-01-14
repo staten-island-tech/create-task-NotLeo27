@@ -1,26 +1,21 @@
-import { clubs } from "./BlueLock";
-import { players } from "./BlueLock";
-import { skills } from "./BlueLock";
+import { clubs, players, skills } from "./BlueLock.js";
 import { DOMSelectors } from "./DOMSelectors";
 
-let inventory = []
+let inventory = [];
 
 function clear() {
-    DOMSelectors.container.innerHTML = ""
+  try {
+    DOMSelectors.container.innerHTML = "";
+  } catch (error) {
+    console.error("Error clearing container:", error);
+  }
 }
 
 function battleScreen() {
-    DOMSelectors.container.insertAdjacentHTML(
-        "beforeend",
-        `<div class="absolute inset-0 z-0">
-          <img
-            src="/placeholder.svg?height=1080&width=1920"
-            alt="Game background"
-            class="w-full h-full object-cover opacity-80"
-          />
-          <div
-            class="absolute inset-0 bg-gradient-to-r from-fuchsia-500/30 to-green-500/30 mix-blend-overlay"
-          ></div>
+  DOMSelectors.container.insertAdjacentHTML(
+    "beforeend",
+    `<div class="absolute inset-0 z-0 bg-fade">
+          <div class="absolute inset-0 bg-gif"></div>
         </div>
 
         <div class="relative z-10 p-4">
@@ -52,57 +47,76 @@ function battleScreen() {
             </div>
           </div>
         </div>`
-    )
+  );
 }
 
 function displayShop() {
-    DOMSelectors.container.insertAdjacentHTML(
-        "beforeend",
-        `<div class="shop-content w-full max-w-md"">
-        <div class="rounded-lg overflow-hidden shadow-lg">
-            <!-- Banner Image -->
-            <div class="banner-bg w-full h-64 relative">
-
-                <div class="absolute inset-0 bg-gradient-to-t from-banner-dark/80 to-transparent"></div>
-            </div>
-           
-            <div class="bg-banner-dark p-4 flex justify-center gap-4">
-            
-                <button class="px-8 py-2 bg-banner-purple rounded-full text-white font-bold shadow-glow hover:opacity-90 transition-opacity">
-                    <div class="flex flex-col items-center">
-                        <span>1x Pull</span>
-                        <span class="text-xs text-gray-400">$5,000,000</span>
-                    </div>
-                </button>
-              
-                <button class="px-8 py-2 bg-banner-purple rounded-full text-white font-bold shadow-glow hover:opacity-90 transition-opacity">
-                    <div class="flex flex-col items-center">
-                        <span>10x Pull</span>
-                        <span class="text-xs text-gray-400">$50,000,000</span>
-                    </div>
-                </button>
-
-            </div>
-
+  DOMSelectors.container.insertAdjacentHTML(
+    "beforeend",
+    `<div class="shop-content w-full max-w-md">
+      <div class="rounded-lg overflow-hidden shadow-lg">
+        <!-- Banner Image -->
+        <div class="banner-bg w-full h-64 relative">
+          <div class="absolute inset-0 bg-gradient-to-t from-banner-dark/80 to-transparent"></div>
         </div>
-        </div>`
-    )
+        
+        <div class="bg-banner-dark p-4 flex justify-center gap-4">
+          <button class="px-8 py-2 bg-banner-purple rounded-full text-white font-bold shadow-glow hover:opacity-90 transition-opacity">
+            <div class="flex flex-col items-center">
+              <span>1x Pull</span>
+              <span class="text-xs text-gray-400">$5,000,000</span>
+            </div>
+          </button>
+          
+          <button class="px-8 py-2 bg-banner-purple rounded-full text-white font-bold shadow-glow hover:opacity-90 transition-opacity">
+            <div class="flex flex-col items-center">
+              <span>10x Pull</span>
+              <span class="text-xs text-gray-400">$50,000,000</span>
+            </div>
+          </button>
+        </div>
+      </div>
+    </div>`
+  );
 }
 
 function displayInventory() {
-    DOMSelectors.container.insertAdjacentHTML(
-        "beforeend",
-        `<div class="inventory-content">
-          <!-- Add your inventory content here -->
-        </div>`
-    )
+  DOMSelectors.container.insertAdjacentHTML(
+    "beforeend",
+    `<div class="inventory-content">
+      <!-- Add your inventory content here -->
+    </div>`
+  );
 }
 
 function displaySetting() {
-  DOMSelectors.container.insertAdjacentElement(
+  DOMSelectors.container.insertAdjacentHTML(
     "beforeend", 
     `<div class="settings-content">
-
+      <!-- Add your settings content here -->
     </div>`
-  )
+  );
 }
+
+const tabActions = {
+  battle: battleScreen,
+  inventory: displayInventory,
+  shop: displayShop,
+  settings: displaySetting,
+};
+
+function handleTabClick(event) {
+  const tabId = event.target.id;
+  clear();
+  if (tabActions[tabId]) {
+    tabActions[tabId]();
+  } else {
+    console.warn(`No action found for tab: ${tabId}`);
+  }
+}
+
+
+DOMSelectors.tabs.forEach((tab) => 
+  tab.addEventListener("click", handleTabClick)
+);
+

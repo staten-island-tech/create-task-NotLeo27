@@ -1,4 +1,4 @@
-clubs = [
+const clubs = [
   {
     name: "Bastard Munchen",
     famerequirement: 10000,
@@ -31,7 +31,7 @@ clubs = [
   },
 ];
 
-players = [
+const players = [
   {
     name: "Rin Itoshi",
     cumulative_stats: 95,
@@ -359,7 +359,7 @@ players = [
   },
 ];
 
-skills = {
+const skills = {
   "1 point": ["Reflex", "Direct Shot", "Manmarking"],
   "3 points": [
     "Spatial Awareness",
@@ -406,6 +406,6 @@ skills = {
   ],
 };
 
-export { skills };
+export { clubs };
 export { players };
 export { skills }
