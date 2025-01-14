@@ -1,5 +1,6 @@
-import { clubs } from "./clubs";
-import { players } from "./players";
+import { clubs } from "./BlueLock";
+import { players } from "./BlueLock";
+import { skills } from "./BlueLock";
 import { DOMSelectors } from "./DOMSelectors";
 
 let inventory = []
@@ -54,13 +55,36 @@ function battleScreen() {
     )
 }
 
-// so much AI I know but I suck at css
-
 function displayShop() {
     DOMSelectors.container.insertAdjacentHTML(
         "beforeend",
-        `<div class="shop-content">
-            <!-- Add your shop content here -->
+        `<div class="shop-content w-full max-w-md"">
+        <div class="rounded-lg overflow-hidden shadow-lg">
+            <!-- Banner Image -->
+            <div class="banner-bg w-full h-64 relative">
+
+                <div class="absolute inset-0 bg-gradient-to-t from-banner-dark/80 to-transparent"></div>
+            </div>
+           
+            <div class="bg-banner-dark p-4 flex justify-center gap-4">
+            
+                <button class="px-8 py-2 bg-banner-purple rounded-full text-white font-bold shadow-glow hover:opacity-90 transition-opacity">
+                    <div class="flex flex-col items-center">
+                        <span>1x Pull</span>
+                        <span class="text-xs text-gray-400">$5,000,000</span>
+                    </div>
+                </button>
+              
+                <button class="px-8 py-2 bg-banner-purple rounded-full text-white font-bold shadow-glow hover:opacity-90 transition-opacity">
+                    <div class="flex flex-col items-center">
+                        <span>10x Pull</span>
+                        <span class="text-xs text-gray-400">$50,000,000</span>
+                    </div>
+                </button>
+
+            </div>
+
+        </div>
         </div>`
     )
 }
@@ -69,7 +93,16 @@ function displayInventory() {
     DOMSelectors.container.insertAdjacentHTML(
         "beforeend",
         `<div class="inventory-content">
-            <!-- Add your inventory content here -->
+          <!-- Add your inventory content here -->
         </div>`
     )
+}
+
+function displaySetting() {
+  DOMSelectors.container.insertAdjacentElement(
+    "beforeend", 
+    `<div class="settings-content">
+
+    </div>`
+  )
 }

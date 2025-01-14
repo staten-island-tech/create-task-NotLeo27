@@ -11,81 +11,32 @@
           extend: { 
             colors: { 
               "game-gold": "#fbbf24", 
-              "game-gold-dark": "#d97706", 
-            }, 
-            backgroundImage: { 
-              'image': "url('BG1.png')", 
-              'image-next': "url('BG2.png')", 
-            }, 
-            keyframes: { 
-              fadeOut: { 
-                '0%': { opacity: '1' }, 
-                '100%': { opacity: '0' }, 
-              }, 
-              fadeIn: { 
-                '0%': { opacity: '0' }, 
-                '100%': { opacity: '1' }, 
-              }, 
-            }, 
-            animation: { 
-              fadeOut: 'fadeOut 1s ease-in-out forwards', 
-              fadeIn: 'fadeIn 1s ease-in-out forwards', 
-            }, 
-          }, 
-        }, 
-      };
-    </script>
-    
-    <script>
-      function transitionBackground() {
-        const currentBg = document.querySelector('.bg-image');
-        const nextBg = document.querySelector('.bg-image-next');
-        
-        if (!currentBg || !nextBg) {
-            console.error('Background elements not found');
-            return;
+              "game-gold-dark": "#d97706",
+              'banner-purple': '#9333ea',
+              'banner-dark': '#1a1a1a',
+            },
+            boxShadow: {
+              'glow': '0 0 10px rgba(147, 51, 234, 0.5)',
+            },
+          }
         }
-    
-        currentBg.classList.add('animate-fadeOut');
-        nextBg.classList.remove('opacity-0');
-        nextBg.classList.add('animate-fadeIn');
-        
-        setTimeout(() => {
-            currentBg.classList.remove('animate-fadeOut');
-            nextBg.classList.remove('animate-fadeIn');
-            
-            const tempClass = currentBg.classList.contains('bg-image') ? 'bg-image-next' : 'bg-image';
-            currentBg.classList.remove('bg-image', 'bg-image-next');
-            currentBg.classList.add(tempClass);
-            nextBg.classList.remove('bg-image', 'bg-image-next');
-            nextBg.classList.add(tempClass === 'bg-image' ? 'bg-image-next' : 'bg-image');
-        
-            currentBg.classList.remove('opacity-0');
-            nextBg.classList.add('opacity-0');
-        }, 1000);
       }
-    
-      function startAutomaticTransitions(interval = 5000) {
-        setInterval(transitionBackground, interval);
-      }
-    
-      document.addEventListener('DOMContentLoaded', () => {
-        startAutomaticTransitions(5000);
-    
-        const battleBtn = document.getElementById('battle');
-        const inventoryBtn = document.getElementById('inventory');
-        const shopBtn = document.getElementById('shop');
-        const settingsBtn = document.getElementById('settings');
-    
-        if (battleBtn) battleBtn.addEventListener('click', battleScreen);
-        if (inventoryBtn) inventoryBtn.addEventListener('click', displayInventory);
-        if (shopBtn) shopBtn.addEventListener('click', displayShop);
-        if (settingsBtn) settingsBtn.addEventListener('click', () => {
-            console.log('Settings clicked');
-        });
-      });
-      
     </script>
+    <style>
+      .bg-gif {
+          background-image: url('/IsagiYoichi.gif');
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
+      }
+      .banner-bg {
+            background-image: url('https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-tnHNuoSl84mkOb1qPFQScQhvIYPan3.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+    </style>
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite App</title>
   </head>
@@ -96,9 +47,7 @@
       <div id="container">
 
         <div class="absolute inset-0 z-0 bg-fade">
-          <div class="absolute inset-0 bg-image bg-cover bg-center transition-opacity duration-1000 ease-in-out"></div>
-          <div class="absolute inset-0 bg-image-next bg-cover bg-center transition-opacity duration-1000 ease-in-out opacity-0"></div>
-          <div class="absolute inset-0 bg-gradient-to-r from-fuchsia-500/30 to-green-500/30 mix-blend-overlay"></div>
+          <div class="absolute inset-0 bg-gif"></div>
         </div>
 
         <div class="relative z-10 p-4">
@@ -148,7 +97,7 @@
           <button
             class="text-white hover:bg-white/10 text-lg font-semibold px-8 py-6 transition-colors duration-200"
             role="tab"
-            i="inventory"
+            id="inventory"
           >
             INVENTORY
           </button>
@@ -172,3 +121,4 @@
     <script src="main.js"></script>
   </body>
 </html>
+
