@@ -2,13 +2,40 @@ import { clubs, players, skills } from "./BlueLock.js";
 import { DOMSelectors } from "./DOMSelectors";
 
 let inventory = [];
+let startingMoney = 150000000;
 
-function clear() {
-  try {
-    DOMSelectors.container.innerHTML = "";
-  } catch (error) {
-    console.error("Error clearing container:", error);
+function getRandomPlayer() {
+  const totalWeight = players.reduce((sum, player) => sum + player.weight, 0);
+  let random = Math.random() * totalWeight;
+  for (let player of players) {
+    if (random < player.weight) {
+      return player;
+    }
+    random -= player.weight;
   }
+}
+
+function summon() {
+  let player = getRandomPlayer();
+  if (!inventory.includes(player) && !summonHistory.includes(player)) {
+    inventory.push(player);
+    summonHistory.push(player);
+    displaySummonedPlayer(player);
+  } else {
+    summon();
+  }
+}
+
+function displaySummonedPlayer(player) {
+  const summonHistoryDiv = document.getElementById("summonHistory");
+  summonHistoryDiv.insertAdjacentHTML(
+    "beforeend",
+    `<div class="p-4 bg-gray-800 text-white rounded-md shadow-md mt-4"> <h3 class="text-lg font-bold">${
+      player.name
+    }</h3> <p>Cumulative Stats: ${
+      player.cumulative_stats
+    }</p> <p>Skills: ${player.skills.join(", ")}</p> </div>`
+  );
 }
 
 function battleScreen() {
@@ -53,32 +80,44 @@ function battleScreen() {
 function displayShop() {
   DOMSelectors.container.insertAdjacentHTML(
     "beforeend",
-    `<div class="shop-content w-full max-w-md">
-      <div class="rounded-lg overflow-hidden shadow-lg">
-        <!-- Banner Image -->
-        <div class="banner-bg w-full h-64 relative">
-          <div class="absolute inset-0 bg-gradient-to-t from-banner-dark/80 to-transparent"></div>
-        </div>
-        
-        <div class="bg-banner-dark p-4 flex justify-center gap-4">
-          <button class="px-8 py-2 bg-banner-purple rounded-full text-white font-bold shadow-glow hover:opacity-90 transition-opacity">
-            <div class="flex flex-col items-center">
-              <span>1x Pull</span>
-              <span class="text-xs text-gray-400">$5,000,000</span>
-            </div>
-          </button>
+    `<div class="shop-content w-full h-full flex justify-center items-center p-4">
+      <div class="w-full max-w-md">
+        <div class="rounded-lg overflow-hidden shadow-lg">
+
+          <div class="w-full h-64 relative bg-banner-dark bg-cover bg-center">
+            <div class="absolute inset-0 bg-gradient-to-t from-banner-dark to-transparent"></div>
+          </div>
           
-          <button class="px-8 py-2 bg-banner-purple rounded-full text-white font-bold shadow-glow hover:opacity-90 transition-opacity">
-            <div class="flex flex-col items-center">
-              <span>10x Pull</span>
-              <span class="text-xs text-gray-400">$50,000,000</span>
-            </div>
-          </button>
+          <div class="bg-banner-dark p-4 flex justify-center gap-4">
+            <button class="px-8 py-2 bg-banner-purple rounded-full text-white font-bold shadow-glow hover:opacity-90 transition-opacity">
+              <div class="flex flex-col items-center">
+                <span>1x Pull</span>
+                <span class="text-xs text-gray-400">$5,000,000</span>
+              </div>
+            </button>
+            
+            <button class="px-8 py-2 bg-banner-purple rounded-full text-white font-bold shadow-glow hover:opacity-90 transition-opacity">
+              <div class="flex flex-col items-center">
+                <span>10x Pull</span>
+                <span class="text-xs text-gray-400">$50,000,000</span>
+              </div>
+            </button>
+          </div>
         </div>
+      </div>
+      <div id="summonHistory">
       </div>
     </div>`
   );
+
+  document
+    .querySelector(".bg-banner-dark")
+    .classList.add("bg-cover", "bg-center");
+  document.querySelector(".bg-banner-dark").style.backgroundImage =
+    'url("BannerImage.jpg")';
 }
+
+function summon() {}
 
 function displayInventory() {
   DOMSelectors.container.insertAdjacentHTML(
@@ -91,7 +130,7 @@ function displayInventory() {
 
 function displaySetting() {
   DOMSelectors.container.insertAdjacentHTML(
-    "beforeend", 
+    "beforeend",
     `<div class="settings-content">
       <!-- Add your settings content here -->
     </div>`
@@ -115,8 +154,6 @@ function handleTabClick(event) {
   }
 }
 
-
-DOMSelectors.tabs.forEach((tab) => 
+DOMSelectors.tabs.forEach((tab) =>
   tab.addEventListener("click", handleTabClick)
 );
-

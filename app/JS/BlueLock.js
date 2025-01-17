@@ -35,6 +35,7 @@ const players = [
   {
     name: "Rin Itoshi",
     cumulative_stats: 95,
+    weight: 1,
     stats: {
       speed: 90,
       defense: 95,
@@ -54,6 +55,7 @@ const players = [
   {
     name: "Sae Itoshi",
     cumulative_stats: 98,
+    weight: 1,
     stats: {
       speed: 87,
       defense: 73,
@@ -72,6 +74,7 @@ const players = [
   {
     name: "Aiku Oliver",
     cumulative_stats: 85,
+    weight: 2,
     stats: {
       speed: 81,
       defense: 93,
@@ -90,6 +93,7 @@ const players = [
   {
     name: "Baro Shoei",
     cumulative_stats: 92,
+    weight: 1,
     stats: {
       speed: 80,
       defense: 68,
@@ -103,6 +107,7 @@ const players = [
   {
     name: "Niko Ikki",
     cumulative_stats: 82,
+    weight: 3,
     stats: {
       speed: 78,
       defense: 84,
@@ -116,6 +121,7 @@ const players = [
   {
     name: "Chigiri Hyoma",
     cumulative_stats: 90,
+    weight: 2,
     stats: {
       speed: 98,
       defense: 68,
@@ -129,6 +135,7 @@ const players = [
   {
     name: "Yoichi Isagi",
     cumulative_stats: 88,
+    weight: 1,
     stats: {
       speed: 77,
       defense: 75,
@@ -151,6 +158,7 @@ const players = [
   {
     name: "Meguru Bachira",
     cumulative_stats: 86,
+    weight: 2,
     stats: {
       speed: 84,
       defense: 68,
@@ -164,6 +172,7 @@ const players = [
   {
     name: "Alexis Ness",
     cumulative_stats: 93,
+    weight: 3,
     stats: {
       speed: 76,
       defense: 71,
@@ -177,6 +186,7 @@ const players = [
   {
     name: "Michael Kaiser",
     cumulative_stats: 98,
+    weight: 1,
     stats: {
       speed: 91,
       defense: 74,
@@ -190,6 +200,7 @@ const players = [
   {
     name: "Jingo Raichi",
     cumulative_stats: 81,
+    weight: 3,
     stats: {
       speed: 77,
       defense: 90,
@@ -203,6 +214,7 @@ const players = [
   {
     name: "Rensuke Kunigami",
     cumulative_stats: 91,
+    weight: 2,
     stats: {
       speed: 85,
       defense: 75,
@@ -221,6 +233,7 @@ const players = [
   {
     name: "Gin Gagamaru",
     cumulative_stats: 85,
+    weight: 2,
     stats: {
       speed: 87,
       defense: 93,
@@ -234,6 +247,7 @@ const players = [
   {
     name: "Jin Kiyora",
     cumulative_stats: 80,
+    weight: 3,
     stats: {
       speed: 82,
       defense: 76,
@@ -251,6 +265,7 @@ const players = [
   {
     name: "Charles Chevalier",
     cumulative_stats: 93,
+    weight: 1,
     stats: {
       speed: 84,
       defense: 77,
@@ -264,6 +279,7 @@ const players = [
   {
     name: "Nagi Seishiro",
     cumulative_stats: 92,
+    weight: 2,
     stats: {
       speed: 82,
       defense: 75,
@@ -277,6 +293,7 @@ const players = [
   {
     name: "Mikage Reo",
     cumulative_stats: 85,
+    weight: 2,
     stats: {
       speed: 81,
       defense: 86,
@@ -290,6 +307,7 @@ const players = [
   {
     name: "Genyu Yukimiya",
     cumulative_stats: 82,
+    weight: 3,
     stats: {
       speed: 89,
       defense: 76,
@@ -303,6 +321,7 @@ const players = [
   {
     name: "Ryusei Shido",
     cumulative_stats: 92,
+    weight: 1,
     stats: {
       speed: 85,
       defense: 77,
@@ -321,6 +340,7 @@ const players = [
   {
     name: "Jyubei Aryu",
     cumulative_stats: 80,
+    weight: 3,
     stats: {
       speed: 74,
       defense: 90,
@@ -334,6 +354,7 @@ const players = [
   {
     name: "Don Lorenzo",
     cumulative_stats: 96,
+    weight: 1,
     stats: {
       speed: 83,
       defense: 99,
@@ -347,6 +368,7 @@ const players = [
   {
     name: "Kurona Ranze",
     cumulative_stats: 83,
+    weight: 2,
     stats: {
       speed: 95,
       defense: 68,
@@ -408,4 +430,4 @@ const skills = {
 
 export { clubs };
 export { players };
-export { skills }
+export { skills };
