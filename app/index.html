@@ -4,37 +4,83 @@
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <link rel="stylesheet" href="CSS/style.css" />
-  <style>
-    .bg-gif {
-      background-image: url('/IsagiYoichi.gif');
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-color: black; /* Fallback color */
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
-    }
-  </style>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Vite App</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="font-sans">
+
+<body class="font-sans bg-gray-900 text-white">
+  <div class="fixed inset-0 bg-black bg-cover bg-center bg-no-repeat z-[-1]" style="background-image: url('/Screen Background.png');"></div>
   
-    <div class="absolute bottom-0 left-0 right-0 z-20" id="tabs">
-      <div class="flex justify-around items-center p-4 bg-black/70 backdrop-blur">
-        <button class="text-white hover:bg-white/10 text-lg font-semibold px-8 py-6 transition-colors duration-200" role="tab" id="inventory">
-          INVENTORY
+  <div class="relative z-10 min-h-screen flex flex-col">
+    <!-- First Banner Content -->
+    <div class="max-w-md mx-auto p-4 bg-black border-2 border-yellow-500 rounded-lg opacity-80 mt-10 mb-10">
+      <div class="relative mb-5">
+        <div class="h-72"></div>
+        <div class="absolute inset-0 border-2 border-yellow-500 rounded-lg h-72" style="background-image: url('/BL11Duo.png'); background-size: cover; background-position: center;">
+          <!-- Banner Background image can be added here -->
+        </div>        
+      </div>
+      
+      <div class="flex justify-center gap-5 mb-4">
+        <button class="px-6 py-3 rounded-full bg-gradient-to-r from-purple-700 to-purple-500 font-bold transition-opacity duration-300 hover:opacity-90">
+          Single Summon
         </button>
+        <button class="px-6 py-3 rounded-full bg-gradient-to-r from-purple-700 to-purple-500 font-bold transition-opacity duration-300 hover:opacity-90">
+          Multi Summon
+        </button>
+      </div>
+    </div>
+    
+    <!-- Second Banner Content -->
+    <div class="max-w-md mx-auto p-4 bg-black border-2 border-yellow-500 rounded-lg opacity-80 mt-10 mb-10"> <!-- Adjusted margin-bottom -->
+      <div class="relative mb-5">
+        <div class="h-72"></div>
+        <div class="absolute inset-0 border-2 border-yellow-500 rounded-lg h-72" style="background-image: url('/U20Duo.png'); background-size: cover; background-position: center;">
+          <!-- Banner Background image can be added here -->
+        </div>
+      </div>
+      
+      <div class="flex justify-center gap-5 mb-4">
+        <button class="px-6 py-3 rounded-full bg-gradient-to-r from-purple-700 to-purple-500 font-bold transition-opacity duration-300 hover:opacity-90">
+          Single Summon
+        </button>
+        <button class="px-6 py-3 rounded-full bg-gradient-to-r from-purple-700 to-purple-500 font-bold transition-opacity duration-300 hover:opacity-90">
+          Multi Summon
+        </button>
+      </div>
+    </div>
+
+    <!-- Third Banner Content -->
+    <div class="max-w-md mx-auto p-4 bg-black border-2 border-yellow-500 rounded-lg opacity-80 mt-10 mb-20"> <!-- Adjusted margin-bottom -->
+      <div class="relative mb-5">
+        <div class="h-72"></div>
+        <div class="absolute inset-0 border-2 border-yellow-500 rounded-lg h-72" style="background-image: url('/Nagi & Barou.png'); background-size: cover; background-position: center;">
+          <!-- Banner Background image can be added here -->
+        </div>
+      </div>
+      
+      <div class="flex justify-center gap-5 mb-4">
+        <button class="px-6 py-3 rounded-full bg-gradient-to-r from-purple-700 to-purple-500 font-bold transition-opacity duration-300 hover:opacity-90">
+          Single Summon
+        </button>
+        <button class="px-6 py-3 rounded-full bg-gradient-to-r from-purple-700 to-purple-500 font-bold transition-opacity duration-300 hover:opacity-90">
+          Multi Summon
+        </button>
+      </div>
+    </div>
+    
+    <!-- Tabs (fixed positioning) -->
+    <div class="fixed bottom-0 left-0 right-0 z-20" id="tabs">
+      <div class="flex justify-around items-center p-4 bg-black/70 backdrop-blur">
         <button class="text-white hover:bg-white/10 text-lg font-semibold px-8 py-6 transition-colors duration-200" role="tab" id="shop">
           SHOP
+        </button>
+        <button class="text-white hover:bg-white/10 text-lg font-semibold px-8 py-6 transition-colors duration-200" role="tab" id="inventory">
+          INVENTORY 
         </button>
       </div>
     </div>
   </div>
-  <script type="module" src="JS/main.js"></script>
 </body>
 </html>
