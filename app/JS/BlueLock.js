@@ -2,7 +2,7 @@ const players = [
   {
     name: "Yoichi Isagi (1st Selection)",
     cumulative_stats: 72,
-    rarity: "Rare",
+    rarity: "Common",
     stats: {
       speed: 62,
       defense: 60,
@@ -17,7 +17,7 @@ const players = [
   {
     name: "Yoichi Isagi (2nd Selection)",
     cumulative_stats: 75,
-    rarity: "Epic",
+    rarity: "Uncommon",
     stats: {
       speed: 65,
       defense: 63,
@@ -32,7 +32,7 @@ const players = [
   {
     name: "Yoichi Isagi (Blue Lock 11)",
     cumulative_stats: 78,
-    rarity: "Mythic",
+    rarity: "Legendary",
     stats: {
       speed: 68,
       defense: 66,
@@ -47,7 +47,7 @@ const players = [
   {
     name: "Rin Itoshi (2nd Selection)",
     cumulative_stats: 83,
-    rarity: "Legendary",
+    rarity: "Rare",
     stats: {
       speed: 78,
       defense: 72,
@@ -62,7 +62,7 @@ const players = [
   {
     name: "Rin Itoshi (Blue Lock 11)",
     cumulative_stats: 86,
-    rarity: "Mythic",
+    rarity: "Legendary",
     stats: {
       speed: 81,
       defense: 75,
@@ -76,7 +76,7 @@ const players = [
   },  {
     name: "Meguru Bachira (1st Selection)",
     cumulative_stats: 74,
-    rarity: "Rare",
+    rarity: "Common",
     stats: {
       speed: 72,
       defense: 62,
@@ -90,7 +90,7 @@ const players = [
   },  {
     name: "Meguru Bachira (Blue Lock 11)",
     cumulative_stats: 76,
-    rarity: "Legendary",
+    rarity: "Rare",
     stats: {
       speed: 75,
       defense: 65,
@@ -104,7 +104,7 @@ const players = [
   },  {
     name: "Ryusei Shidou (U20 Japan)",
     cumulative_stats: 82,
-    rarity: "Mythic",
+    rarity: "Legendary",
     stats: {
       speed: 77,
       defense: 69,
@@ -118,7 +118,7 @@ const players = [
   },  {
     name: "Sae Itoshi",
     cumulative_stats: 87,
-    rarity: "Mythic",
+    rarity: "Legendary",
     stats: {
       speed: 77,
       defense: 75,
@@ -132,7 +132,7 @@ const players = [
   },  {
     name: "Seishiro Nagi (2nd Selection)",
     cumulative_stats: 80,
-    rarity: "Legendary",
+    rarity: "Rare",
     stats: {
       speed: 70,
       defense: 63,
@@ -146,7 +146,7 @@ const players = [
   },  {
     name: "Seishiro Nagi (Blue Lock 11)",
     cumulative_stats: 83,
-    rarity: "Mythic",
+    rarity: "Legendary",
     stats: {
       speed: 73,
       defense: 66,
@@ -160,7 +160,7 @@ const players = [
   },  {
     name: "Reo Mikage (Blue Lock 11)",
     cumulative_stats: 72,
-    rarity: "Legendary",
+    rarity: "Rare",
     stats: {
       speed: 75,
       defense: 80,
@@ -174,7 +174,7 @@ const players = [
   }, {
     name: "Tabito Karasu (Blue Lock 11)",
     cumulative_stats: 78,
-    rarity: "Legendary",
+    rarity: "Rare",
     stats: {
       speed: 78,
       defense: 82,
@@ -188,7 +188,7 @@ const players = [
   }, {
     name: "Eita Otoya (Blue Lock 11)",
     cumulative_stats: 76,
-    rarity: "Legendary",
+    rarity: "Rare",
     stats: {
       speed: 82,
       defense: 74,
@@ -202,7 +202,7 @@ const players = [
   }, {
     name: "Hyoma Chigiri (1st Selection)",
     cumulative_stats: 78,
-    rarity: "Rare",
+    rarity: "Common",
     stats: {
       speed: 86,
       defense: 56,
@@ -216,7 +216,7 @@ const players = [
   }, {
     name: "Hyoma Chigiri (Blue Lock 11)",
     cumulative_stats: 78,
-    rarity: "Legendary",
+    rarity: "Rare",
     stats: {
       speed: 89,
       defense: 59,
@@ -230,7 +230,7 @@ const players = [
   }, {
     name: "Shoei Barou (2nd Selection)",
     cumulative_stats: 83,
-    rarity: "Epic",
+    rarity: "Uncommon",
     stats: {
       speed: 71,
       defense: 59,
@@ -244,7 +244,7 @@ const players = [
   },  {
     name: "Shouei Barou (Blue Lock 11)",
     cumulative_stats: 86,
-    rarity: "Mythic",
+    rarity: "Legendary",
     stats: {
       speed: 74,
       defense: 59,
@@ -258,7 +258,7 @@ const players = [
   }, {
     name: "Kenyu Yukimiya",
     cumulative_stats: 73,
-    rarity: "Legendary",
+    rarity: "Rare",
     stats: {
       speed: 82,
       defense: 70,
@@ -272,7 +272,7 @@ const players = [
   },  {
     name: "Ikki Niko (1st Selection)",
     cumulative_stats: 73,
-    rarity: "Rare",
+    rarity: "Common",
     stats: {
       speed: 69,
       defense: 75,
@@ -286,7 +286,7 @@ const players = [
   },  {
     name: "Ikki Niko (Blue Lock 11)",
     cumulative_stats: 76,
-    rarity: "Legendary",
+    rarity: "Rare",
     stats: {
       speed: 72,
       defense: 78,
@@ -300,7 +300,7 @@ const players = [
   },  {
     name: "Jyubei Aryu (Blue Lock 11)",
     cumulative_stats: 71,
-    rarity: "Epic",
+    rarity: "Uncommon",
     stats: {
       speed: 68,
       defense: 84,
@@ -314,7 +314,7 @@ const players = [
   },  {
     name: "Oliver Aiku",
     cumulative_stats: 0,
-    rarity: "Mythic",
+    rarity: "Legendary",
     stats: {
       speed: 75,
       defense: 87,
@@ -328,7 +328,7 @@ const players = [
   },  {
     name: "Rensuke Kunigami",
     cumulative_stats: 83,
-    rarity: "Rare",
+    rarity: "Common",
     stats: {
       speed: 73,
       defense: 63,
@@ -341,6 +341,16 @@ const players = [
     image: ""
   }
 ];
+
+Rarities = [
+  {
+    Common: 70,
+    Rare: 20,
+    Epic: 8,
+    Legendary: 2,
+  }
+]
+
 
 /*
 {
