@@ -374,4 +374,4 @@ const banner3Exclusive = [
   "Shoei Baro (Blue Lock 11)",
 ]
 
-export { players, allBanners, banner1Exclusive, banner2Exclusive, banner3Exclusive}
+export { players, allBanners, banner1Exclusive, banner2Exclusive, banner3Exclusive };
