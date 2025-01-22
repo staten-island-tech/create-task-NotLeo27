@@ -102,7 +102,7 @@ const players = [
     skills: ["Elastic Dribbling", "Key Passing", "Monstrance"],
     image: ""
   },  {
-    name: "Ryusei Shidou (U20 Japan)",
+    name: "Ryusei Shido (U20 Japan)",
     cumulative_stats: 82,
     rarity: "Legendary",
     stats: {
@@ -313,7 +313,7 @@ const players = [
     image: ""
   },  {
     name: "Oliver Aiku",
-    cumulative_stats: 0,
+    cumulative_stats: 76,
     rarity: "Legendary",
     stats: {
       speed: 75,
@@ -342,30 +342,36 @@ const players = [
   }
 ];
 
-Rarities = [
-  {
-    Common: 70,
-    Rare: 20,
-    Epic: 8,
-    Legendary: 2,
-  }
+const allBanners = [
+  "Yoichi Isagi (1st Selection)",
+  "Yoichi Isagi (2nd Selection)",
+  "Rin Itoshi (2nd Selection)",
+  "Meguru Bachira (1st Selection)",
+  "Seishiro Nagi (2nd Selection)",
+  "Reo Mikage (Blue Lock 11)",
+  "Tabito Karasu (Blue Lock 11)",
+  "Eita Otoya (Blue Lock 11)",
+  "Hyoma Chigiri (1st Selection)",
+  "Ikki Niko (1st Selection)",
+  "Ikki Niko (Blue Lock 11)",
+  "Jyubei Aryu (Blue Lock 11)",
+  "Oliver Aiku",
+  "Rensuke Kunigami"
+];
+
+const banner1Exclusive = [
+  "Yoichi Isagi (Blue Lock 11)",
+  "Rin Itoshi (Blue Lock 11)",
 ]
 
+const banner2Exclusive = [
+  "Sae Itoshi",
+  "Ryusei Shido (U20 Japan)",
+];
 
-/*
-{
-  name: "",
-  cumulative_stats: 0,
-  rarity: "",
-  stats: {
-    speed: 0,
-    defense: 0,
-    passing: 0,
-    dribble: 0,
-    shoot: 0,
-    offense: 0,
-  },
-  skills: [],
-  image: ""
-}
-*/
+const banner3Exclusive = [
+  "Seishiro Nagi (Blue Lock 11)",
+  "Shoei Baro (Blue Lock 11)",
+]
+
+export { players, allBanners, banner1Exclusive, banner2Exclusive, banner3Exclusive}
