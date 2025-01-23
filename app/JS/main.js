@@ -176,7 +176,6 @@ function displayInventory() {
   `
 }
 
-
 function getRandomPlayerFromPool(pool) {
   const random = Math.random() * 100;
   let rarity;
@@ -185,7 +184,7 @@ function getRandomPlayerFromPool(pool) {
     rarity = 'Common';
   } else if (random < 90) {
     rarity = 'Uncommon';
-  } else if (random < 99) {
+  } else if (random < 98) {
     rarity = 'Rare';
   } else {
     rarity = 'Legendary';
