@@ -254,7 +254,7 @@ const players = [
     image: "/Shoei Barou (2nd Selection).png"
   },
   {
-    name: "Shouei Barou (Blue Lock 11)",
+    name: "Shoei Barou (Blue Lock 11)",
     cumulative_stats: 86,
     rarity: "Legendary",
     stats: {
@@ -269,7 +269,7 @@ const players = [
     image: "/Shouei Barou (Blue Lock 11).png"
   },
   {
-    name: "Kenyu Yukimiya",
+    name: "Kenyu Yukimiya (Blue Lock 11)",
     cumulative_stats: 73,
     rarity: "Rare",
     stats: {
@@ -281,7 +281,7 @@ const players = [
       offense: 82,
     },
     skills: ["1-on-1 Emperor Style", "Immense Speed", "Gyro Shot", "Flow"],
-    image: "/Kenyu Yukimiya.png"
+    image: "/Kenyu Yukimiya (Blue Lock 11).png"
   },
   {
     name: "Ikki Niko (1st Selection)",
@@ -374,7 +374,8 @@ const allBanners = [
   "Ikki Niko (Blue Lock 11)",
   "Jyubei Aryu (Blue Lock 11)",
   "Oliver Aiku",
-  "Rensuke Kunigami"
+  "Rensuke Kunigami",
+  "Kenyu Yukimiya (Blue Lock 11)"
 ];
 
 const banner1Exclusive = [

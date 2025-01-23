@@ -106,14 +106,19 @@ function displayInventory() {
                 : "bg-gradient-to-br from-yellow-500 to-yellow-400"
         }">
           <div class="relative p-4 text-white">
+            <!-- Player Image -->
+            <div class="absolute top-0 left-0 w-full h-48 overflow-hidden">
+              <img src="${player.image}" alt="${player.name}" class="w-full h-full object-cover object-center" />
+            </div>
+            
             <!-- Rating Box -->
-            <div class="absolute top-4 left-4 bg-black/80 p-2 rounded-md text-center">
+            <div class="absolute top-4 left-4 bg-black/80 p-2 rounded-md text-center z-10">
               <div class="text-3xl font-bold leading-none">${player.cumulative_stats}</div>
               <div class="text-sm opacity-90">ST</div>
             </div>
             
             <!-- Player Name -->
-            <h2 class="text-center text-xl font-bold mt-16 mb-4 text-white drop-shadow-lg">
+            <h2 class="text-center text-xl font-bold mt-52 mb-4 text-white drop-shadow-lg">
               ${player.name}
             </h2>
             
@@ -170,6 +175,7 @@ function displayInventory() {
     </div>
   `
 }
+
 
 function getRandomPlayerFromPool(pool) {
   const random = Math.random() * 100;
