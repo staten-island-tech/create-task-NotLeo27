@@ -107,8 +107,13 @@ function displayInventory() {
         }">
           <div class="relative p-4 text-white">
             <!-- Player Image -->
-            <div class="absolute top-0 left-0 w-full h-48 overflow-hidden">
-              <img src="${player.image}" alt="${player.name}" class="w-full h-full object-cover object-center" />
+            <div class="absolute top-0 left-0 w-full h-48 overflow-hidden bg-gray-200">
+              <img 
+                src="${player.image}" 
+                alt="${player.name}" 
+                class="w-full h-full object-contain"
+                onerror="this.onerror=null; this.src='/placeholder.svg?height=192&width=288';"
+              />
             </div>
             
             <!-- Rating Box -->
@@ -175,6 +180,8 @@ function displayInventory() {
     </div>
   `
 }
+
+
 
 function getRandomPlayerFromPool(pool) {
   const random = Math.random() * 100;
