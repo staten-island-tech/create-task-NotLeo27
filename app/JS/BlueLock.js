@@ -12,7 +12,7 @@ const players = [
       offense: 79,
     },
     skills: ["Spatial Awareness", "Direct Shot"],
-    image: ""
+    image: "/Yoichi Isagi (1st Selection).jpg"
   },
   {
     name: "Yoichi Isagi (2nd Selection)",
@@ -27,7 +27,7 @@ const players = [
       offense: 82,
     },
     skills: ["Spatial Awareness", "Direct Shot", "Off-the-Ball"],
-    image: ""
+    image: "/Yoichi Isagi (2nd Selection).jpg"
   },
   {
     name: "Yoichi Isagi (Blue Lock 11)",
@@ -42,7 +42,7 @@ const players = [
       offense: 85,
     },
     skills: ["Spatial Awareness", "Direct Shot", "Off-the-Ball", "Reflex", "Flow"],
-    image: " "
+    image: "/Yoichi Isagi (Blue Lock 11).jpg"
   },
   {
     name: "Rin Itoshi (2nd Selection)",
@@ -57,7 +57,7 @@ const players = [
       offense: 87,
     },
     skills: ["Spatial Awareness", "Perfect Kick Accuracy", "Off-the-Ball"],
-    image: ""
+    image: "/Rin Itoshi (2nd Selection).jpg"
   },
   {
     name: "Rin Itoshi (Blue Lock 11)",
@@ -72,8 +72,9 @@ const players = [
       offense: 90,
     },
     skills: ["Spatial Awareness", "Perfect Kick Accuracy", "Off-the-Ball", "Egotistical Destroyer"],
-    image: ""
-  },  {
+    image: "/Rin Itoshi (Blue Lock 11).jpg"
+  },
+  {
     name: "Meguru Bachira (1st Selection)",
     cumulative_stats: 74,
     rarity: "Common",
@@ -86,8 +87,9 @@ const players = [
       offense: 71,
     },
     skills: ["Elastic Dribbling", "Key Passing"],
-    image: ""
-  },  {
+    image: "/Meguru Bachira (1st Selection).jpg"
+  },
+  {
     name: "Meguru Bachira (Blue Lock 11)",
     cumulative_stats: 76,
     rarity: "Rare",
@@ -100,8 +102,9 @@ const players = [
       offense: 74,
     },
     skills: ["Elastic Dribbling", "Key Passing", "Monstrance"],
-    image: ""
-  },  {
+    image: "/Meguru Bachira (Blue Lock 11).jpg"
+  },
+  {
     name: "Ryusei Shido (U20 Japan)",
     cumulative_stats: 82,
     rarity: "Legendary",
@@ -114,8 +117,9 @@ const players = [
       offense: 83,
     },
     skills: ["Dominant Physicality", "Extreme Spatial Perception", "Reflex", "Flow"],
-    image: ""
-  },  {
+    image: "/Ryusei Shido (U20 Japan).png"
+  },
+  {
     name: "Sae Itoshi",
     cumulative_stats: 87,
     rarity: "Legendary",
@@ -128,8 +132,9 @@ const players = [
       offense: 74,
     },
     skills: ["Perfect Kick Technique", "Counter Dribbling", "Reflex", "Meta-Vision"],
-    image: ""
-  },  {
+    image: "/Sae Itoshi.jpg"
+  },
+  {
     name: "Seishiro Nagi (2nd Selection)",
     cumulative_stats: 80,
     rarity: "Rare",
@@ -142,8 +147,9 @@ const players = [
       offense: 79,
     },
     skills: ["Perfect Ball Control", "Trapping", "Flow"],
-    image: ""
-  },  {
+    image: "/Seishiro Nagi (2nd Selection).jpg"
+  },
+  {
     name: "Seishiro Nagi (Blue Lock 11)",
     cumulative_stats: 83,
     rarity: "Legendary",
@@ -156,8 +162,9 @@ const players = [
       offense: 82,
     },
     skills: ["Perfect Ball Control", "Trapping", "Flow"],
-    image: ""
-  },  {
+    image: "/Seishiro Nagi (Blue Lock 11).png"
+  },
+  {
     name: "Reo Mikage (Blue Lock 11)",
     cumulative_stats: 72,
     rarity: "Rare",
@@ -170,7 +177,7 @@ const players = [
       offense: 80,
     },
     skills: ["Dexterity", "The Chameleon"],
-    image: ""
+    image: "/Reo Mikage (Blue Lock 11).jpg"
   }, {
     name: "Tabito Karasu (Blue Lock 11)",
     cumulative_stats: 78,
@@ -184,8 +191,9 @@ const players = [
       offense: 76,
     },
     skills: ["Sharp Analyzation", "Expert Ball Control"],
-    image: ""
-  }, {
+    image: "/Tabito Karasu (Blue Lock 11).jpg"
+  },
+  {
     name: "Eita Otoya (Blue Lock 11)",
     cumulative_stats: 76,
     rarity: "Rare",
@@ -198,8 +206,9 @@ const players = [
       offense: 76,
     },
     skills: ["High Speed Infiltration", "Off-the-Ball"],
-    image: ""
-  }, {
+    image: "/Eita Otoya (Blue Lock 11).jpg"
+  },
+  {
     name: "Hyoma Chigiri (1st Selection)",
     cumulative_stats: 78,
     rarity: "Common",
@@ -212,8 +221,9 @@ const players = [
       offense: 83,
     },
     skills: ["Immeasurable Speed"],
-    image: ""
-  }, {
+    image: "/Hyoma Chigiri (1st Selection).jpg"
+  },
+  {
     name: "Hyoma Chigiri (Blue Lock 11)",
     cumulative_stats: 78,
     rarity: "Rare",
@@ -226,8 +236,9 @@ const players = [
       offense: 86,
     },
     skills: ["Immeasurable Speed"],
-    image: ""
-  }, {
+    image: "/Hyoma Chigiri (Blue Lock 11).jpg"
+  },
+  {
     name: "Shoei Barou (2nd Selection)",
     cumulative_stats: 83,
     rarity: "Uncommon",
@@ -239,9 +250,10 @@ const players = [
       shoot: 87,
       offense: 86,
     },
-    skills: ["Charging Skill", "Middle Shot","Villain Soccer"],
-    image: ""
-  },  {
+    skills: ["Charging Skill", "Middle Shot", "Villain Soccer"],
+    image: "/Shoei Barou (2nd Selection).jpg"
+  },
+  {
     name: "Shouei Barou (Blue Lock 11)",
     cumulative_stats: 86,
     rarity: "Legendary",
@@ -254,8 +266,9 @@ const players = [
       offense: 89,
     },
     skills: ["Charging Skill", "Middle Shot", "Flow", "Villain Soccer"],
-    image: ""
-  }, {
+    image: "/Shouei Barou (Blue Lock 11).jpg"
+  },
+  {
     name: "Kenyu Yukimiya",
     cumulative_stats: 73,
     rarity: "Rare",
@@ -268,8 +281,9 @@ const players = [
       offense: 82,
     },
     skills: ["1-on-1 Emperor Style", "Immense Speed", "Gyro Shot", "Flow"],
-    image: ""
-  },  {
+    image: "/Kenyu Yukimiya.jpg"
+  },
+  {
     name: "Ikki Niko (1st Selection)",
     cumulative_stats: 73,
     rarity: "Common",
@@ -282,8 +296,9 @@ const players = [
       offense: 73,
     },
     skills: ["Spatial Awareness"],
-    image: ""
-  },  {
+    image: "/Ikki Niko (1st Selection).jpg"
+  },
+  {
     name: "Ikki Niko (Blue Lock 11)",
     cumulative_stats: 76,
     rarity: "Rare",
@@ -296,8 +311,9 @@ const players = [
       offense: 76,
     },
     skills: ["Spatial Awareness", "Watchtower Soccer"],
-    image: "" 
-  },  {
+    image: "/Ikki Niko (Blue Lock 11).jpg"
+  },
+  {
     name: "Jyubei Aryu (Blue Lock 11)",
     cumulative_stats: 71,
     rarity: "Uncommon",
@@ -310,8 +326,9 @@ const players = [
       offense: 66,
     },
     skills: ["Jumping Power", "Long Reach"],
-    image: ""
-  },  {
+    image: "/Jyubei Aryu (Blue Lock 11).jpg"
+  },
+  {
     name: "Oliver Aiku",
     cumulative_stats: 76,
     rarity: "Legendary",
@@ -324,8 +341,9 @@ const players = [
       offense: 66,
     },
     skills: ["Dominant Physicality", "Spatial Awareness", "Reflex", "Flow"],
-    image: ""
-  },  {
+    image: "/Oliver Aiku.jpg"
+  },
+  {
     name: "Rensuke Kunigami",
     cumulative_stats: 83,
     rarity: "Common",
@@ -338,8 +356,8 @@ const players = [
       offense: 79,
     },
     skills: ["Dominant Physicality", "Finesse Shot"],
-    image: ""
-  }
+    image: "/Rensuke Kunigami.jpg"
+  }  
 ];
 
 const allBanners = [
