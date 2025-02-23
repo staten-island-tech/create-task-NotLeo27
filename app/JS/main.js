@@ -182,7 +182,6 @@ function displayInventory() {
 }
 
 
-
 function getRandomPlayerFromPool(pool) {
   const random = Math.random() * 100;
   let rarity;
